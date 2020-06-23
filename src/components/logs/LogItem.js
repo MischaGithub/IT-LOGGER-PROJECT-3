@@ -9,7 +9,7 @@ const LogItem = ({ log }) => {
         <a
           href="#edit-log-modal"
           className={`modal-trigger ${
-            log.attention ? "red-text" : "blue-text"
+            log.attention ? "green-text" : "blue-text"
           }`}
         >
           {log.message}
@@ -21,7 +21,7 @@ const LogItem = ({ log }) => {
           <Moment format="MMM Do YYYY, h:mm:ss a">{log.date}</Moment>
         </span>
         <a href="#!" className="secondary-content">
-          <i className="material-icons grey-text">delete</i>
+          <i className="material-icons red-text">delete</i>
         </a>
       </div>
     </li>
