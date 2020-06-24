@@ -5,6 +5,7 @@ import {
   ADD_LOG,
   DELETE_LOG,
   UPDATE_LOG,
+  SEARCH_LOGS,
   SET_CURRENT,
   CLEAR_CURRENT,
 } from "./types";
@@ -118,6 +119,28 @@ export const updateLog = (log) => async (dispatch) => {
     // Dispatch
     dispatch({
       type: UPDATE_LOG,
+      payload: data,
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: err.response.data,
+    });
+  }
+};
+
+// Search Server Logs
+export const searchLogs = (text) => async (dispatch) => {
+  try {
+    setLoading();
+
+    // Fetch req
+    const res = await fetch(`/logs?q=${text}`);
+    const data = await res.json();
+
+    // Dispatch
+    dispatch({
+      type: SEARCH_LOGS,
       payload: data,
     });
   } catch (err) {
