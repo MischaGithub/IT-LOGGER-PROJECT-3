@@ -58,6 +58,30 @@ export const addTech = (tech) => async (dispatch) => {
   }
 };
 
+// Delete Tech from server
+export const deleteTechs = (id) => async (dispatch) => {
+  // some error handling
+  try {
+    setLoading();
+
+    // Fetch req
+    await fetch(`/techs/${id}`, {
+      method: "DELETE",
+    });
+
+    // Dispatch
+    dispatch({
+      type: DELETE_TECH,
+      payload: id,
+    });
+  } catch (err) {
+    dispatch({
+      type: TECHS_ERROR,
+      payload: err.response.statusText,
+    });
+  }
+};
+
 // Set loading to true
 export const setLoading = () => {
   return {
