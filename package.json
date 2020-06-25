@@ -22,6 +22,7 @@
     "json-server": "json-server --watch db.json --port 5000",
     "dev": "concurrently \"npm start\" \"npm run json-server\"",
     "build": "react-scripts build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install it-logger && npm run build it-logger",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
