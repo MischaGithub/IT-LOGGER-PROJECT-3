@@ -8,18 +8,11 @@
       "id": 1
     },
     {
-      "id": 2,
-      "message": "Fixed Hard drive on workstation 002",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2020-06-24T10:15:48.305Z"
-    },
-    {
-      "message": "1122 wireless down",
+      "message": "Changed network card in server 007",
       "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2020-06-24T09:19:43.794Z",
-      "id": 3
+      "tech": "Sam Smith",
+      "date": "2020-06-25T10:54:13.952Z",
+      "id": 2
     }
   ],
   "techs": [
@@ -37,6 +30,11 @@
       "firstName": "Sara ",
       "lastName": "Wilson",
       "id": 3
+    },
+    {
+      "firstName": "James",
+      "lastName": "Jones",
+      "id": 4
     }
   ]
 }

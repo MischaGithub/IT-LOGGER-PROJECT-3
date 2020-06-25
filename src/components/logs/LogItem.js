@@ -12,7 +12,7 @@ const LogItem = ({ log, deleteLog, setCurrent }) => {
     deleteLog(log.id);
 
     // Message
-    M.toast({ htmk: "Log Deleted" });
+    M.toast({ html: "Log Deleted" });
   };
 
   return (
